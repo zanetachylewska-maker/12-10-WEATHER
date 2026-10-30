@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form action="/wyszukaj" method="post">
+        <label for="city">Wpisz nazwę miasta</label>
+        <input id="city" type="text" name="query">
+        <button type="submit">Wyszukaj</button>
+    </form>
+
+    {% if not weather %}
+        <p>Brak informacji</p>
+    {% else %}
+        <div>
+            <h3>Nazwa: {{ weather.place }}</h3>
+            <h3>Temperatura: {{ weather.temp }}</h3>
+            <h3>Wiatr: {{weather.temp}}</h3>
+        </div>
+    {% endif %}
+
+
+</body>
+</html>
